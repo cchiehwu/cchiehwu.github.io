@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chieh Wu's Resume</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .carousel-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+        .center {
+        margin-left: auto;
+        margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <img src = "RMIT_University_Logo.svg (1).png" alt = "RMIT University Logo">
+    <h1 style = "text-align: center;"> My Resume</h1>
+    <table class = "center">
+        <td><img src = profile_pic.jpg alt = "Chieh Wu profile_pic"></td>
+        <td>
+        <br>
+        <h2>Chieh Chung Wu</h2>
+        <p><i>First-year Student of <strong>RMIT University</strong></i></p>
+        <p><i><strong>sID: </strong></i>s4080401</p>
+        <p><i><strong>Major: </strong></i>Cyber Security</p>
+        <p>Hello everyone!👋 My name is Chieh Wu. Cafe Muối addict who is passionate about IT and photography. Looking forward to get along with you all! 🙂‍↕️</p>
+        </td>
+    </table>
+
+    <hr>
+    <section style = "text-align: center;">
+        <h2>👀👀 My Hobbies 👀👀</h2>
+        <p>Photography 📸</p>
+        <p>Video Games 🎮</p>
+        <p>Badminton 🏸</p>
+        <p>Gym 💪</p>
+        <p>Bowling 🎳</p>
+    </section>
+
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="z6389968903845_7366d6df67437442c821a3c28bd87a31.jpg" alt="Senset in Berlin">
+            <img src="z6389968948945_4461ac55ab8f8b4e0b07a36d291ccc54.jpg" alt="Frankfurt landscape">
+            <img src="z6389968993793_1ca625b680d6580949c79c4237aba12c.jpg" alt="Berlin Cathedral">
+            <img src="z6389968993833_7e93f949542eb0f1deb2beb8b11c24cd.jpg" alt="Venice landscape">
+            <img src="z6389969038300_9372cf88a69bd87408c470200dbc9093.jpg" alt="Chatelet Les Halles metro station, Paris">
+            <img src="z6389969038363_da501a1e37c308d444df197507f4e5b9.jpg" alt="Red Flower near Eiffel Tower">
+            <img src="z6389969084476_2bfb391e5fd33bedb7d82894e6b9b452.jpg" alt="Eiffel Tower at night">
+            <img src="z6389969084535_f30f1228c831594bb7aea2e9fe4fb37b.jpg" alt="HCM City Landscape">
+            <img src="z6389969130503_f10e793cc7b78f96c0181ee2ab8c208d.jpg" alt="Metro worker in Taichung">
+            <img src="z6389969130547_289e38947485075ab66d02cd5bea4d03.jpg" alt="Night Street Food in Changhua">
+            <img src="z6389969176123_070df3369dbf19d04a3db8b2648128ba.jpg" alt="Bird in Baguashan, Taichung">
+            <img src="z6389969176187_8824ca91ea6cb7be984700740d6998d0.jpg" alt="Peacock, Thao Cam Vien">
+            <img src="z6389969220177_3003a2b9175cb9a8dc9dae384bae5321.jpg" alt="Sunrise in Dalat 1">
+            <img src="z6389969220178_4051119dcf34c210e6c82f97a99a96c1.jpg" alt="Sunrise in Dalat 2">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">❮</button>
+        <button class="next" onclick="moveSlide(1)">❯</button>
+    </div>
+    
+    <script>
+        let index = 0;
+        const slides = document.querySelector('.carousel-slide');
+        const totalImages = slides.children.length;
+    
+        function moveSlide(step) {
+            index += step;
+            if (index >= totalImages) index = 0;
+            if (index < 0) index = totalImages - 1;
+            slides.style.transform = `translateX(${-index * 100}%)`;
+        }
+    </script>
+    <hr>
+    <section style = "text-align: center;">
+        <h2>💻💻 My skill sets 💻💻</h2>
+        <p>Here are my skill sets so far — there's still a lot of work to do. Fortunately, thanks to my previous job I've got to learned a thing or two about photography and videography. 👻</p>
+        <p>HTML/CSS ⭐️⭐️</p>
+        <p>Java ⭐️⭐️⭐️</p>
+        <p>Adobe Premiere Pro/After Effect ⭐️⭐️⭐️</p>
+        <p>Adobe Lightroom ⭐️⭐️⭐️⭐️</p>
+        <p>Adobe Illustrator/Photoshop ⭐️⭐️⭐️</p>
+    </section>
+
+    <hr>
+    <section style = "text-align: center;">
+        <h1>🫶🫶 Connect with me! 🫶🫶</h1>
+        <a href = "https://www.instagram.com/cchiehwu"><img src = "instagram.png" alt = "instagram logo" width="50" height="50"></a>
+        <a href = "https://www.facebook.com/chungchieh.wu.10/"><img src = "facebook.png" alt = "facebook logo" width="50" height="50"></a>
+    </section>
+</body>
+
+
+</html>
